@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mugambi's Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Mugambi's Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+        <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="text-center" id="home">
+    <div class="container">
+      <img src="e63583a3-892d-41cd-be99-911f30955a47.jpeg" class="rounded-circle" alt="Moe's Photo">
+      <h1>Mugambi - Software Engineer</h1>
+      <p>I design and develop high-quality web applications with a focus on responsive design and user experience.</p>
+      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#bookCallModal">Book a Call</a>
+      <a href="#projects" class="btn btn-secondary">My Works</a>
+
+      <!-- Modal for Booking a Call -->
+      <div class="modal fade" id="bookCallModal" tabindex="-1" aria-labelledby="bookCallModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="bookCallModalLabel">Book a Call</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                  <label for="date">Preferred Date</label>
+                  <input type="date" class="form-control" id="date">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-icons mt-3">
+        <a href="https://wa.me/+254704409735" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/ian-mugambi" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/Mugambidev" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://twitter.com/DemocrAfric" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Recent Clients Section -->
+  <section class="text-center" id="clients">
+    <div class="container">
+      <h2>Meet My Recent Clients</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-3 col-sm-4 col-6"><img src="logo-png.jpg" alt="Nyumba Care"></div>
+        <div class="col-md-3 col-sm-4 col-6"><img src="logo-png.png" alt="Eco Coffee Farm"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="text-center">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fab fa-react fa-3x"></i>
+          <h3>React</h3>
+          <p>Building dynamic, responsive web applications with React and Redux.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fab fa-js fa-3x"></i>
+          <h3>JavaScript</h3>
+          <p>Proficient in ES6+ syntax, developing scalable and maintainable code.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fab fa-python fa-3x"></i>
+          <h3>Python</h3>
+          <p>Experienced in backend development using Flask and Django.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="text-center">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <img src="0089b7ae1ed394f041c5f7929e111c11e8eafe4d-424x421.webp" class="card-img-top project-img" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">E-commerce Store</h5>
+              <p class="card-text">A full-featured e-commerce store built with React and Flask, featuring user authentication, product management, and a shopping cart system.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <img src="logo2.png" class="card-img-top project-img" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">Property Management App</h5>
+              <p class="card-text">A comprehensive property management system designed to streamline rent payments, maintenance requests, and communication between tenants and landlords.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Journey Section -->
+  <section id="journey" class="text-center">
+    <div class="container">
+      <h2>My Journey</h2>
+      <p>I began my career as a software engineer in 2020, driven by a passion for technology and a desire to create impactful solutions. Over the years, I have honed my skills in web development, working on a diverse range of projects that showcase my expertise and dedication to excellence.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="service" class="text-center">
+    <div class="container">
+      <h2>Services</h2>
+      <p>I offer a range of services to help businesses and individuals achieve their digital goals. Whether you need a new website, a custom web application, or technical consulting, I am here to assist you.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fas fa-code fa-3x"></i>
+          <h3>Web Development</h3>
+          <p>Custom website and web application development tailored to your needs.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-mobile-alt fa-3x"></i>
+          <h3>Responsive Design</h3>
+          <p>Creating responsive designs that work seamlessly on all devices.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-cogs fa-3x"></i>
+          <h3>Technical Consulting</h3>
+          <p>Providing expert advice and solutions to solve complex technical challenges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="text-center" id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <form>
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="text-center">
+    <div class="container">
+      <p>&copy; 2024 Mugambi. All Rights Reserved.</p>
+      <div class="social-icons mt-3">
+        <a href="https://wa.me/+254704409735" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/ian-mugambi" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/Mugambidev" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://twitter.com/DemocrAfric" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
