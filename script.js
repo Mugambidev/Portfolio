@@ -227,25 +227,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Contact form submission
-  const contactForm = document.getElementById('contact-form');
+ // Contact form submission
+ document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault(); // This stops the normal form submission
   
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+  // PROPER way to get form data
+  const form = e.target;
+  const formData = new FormData(form);
+  
+  // Convert FormData to regular object
+  const formValues = {
+    name: formData.get('name')?.trim() || null,
+    email: formData.get('email')?.trim() || null,
+    message: formData.get('message')?.trim() || null
+  };
+
+  console.log('Form values:', formValues); // Debug log
+
+  // Validation
+  if (!formValues.name || !formValues.email || !formValues.message) {
+    alert('Please fill in ALL required fields');
+    return;
+  }
+
+  // Send to server
+  try {
+    const response = await fetch('http://localhost:3000/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formValues)
+    });
+
+    if (!response.ok) throw new Error('Server error');
     
-    // Get form values
-    const formData = new FormData(this);
-    const formValues = Object.fromEntries(formData.entries());
-    
-    // Here you would typically send the data to a server
-    console.log('Form submitted:', formValues);
-    
-    // Show success message
-    alert('Thank you for your message! I will get back to you soon.');
-    
-    // Reset form
-    this.reset();
-  });
+    const result = await response.json();
+    if (result.success) {
+      alert('Message sent!');
+      form.reset();
+    } else {
+      throw new Error(result.message || 'Failed to send');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert(error.message || 'Error sending message');
+  }
+});
 
   // Custom cursor
   const cursor = document.querySelector('.cursor');
