@@ -17,6 +17,11 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Serve static files from Vercel
+if (process.env.VERCEL) {
+  app.use(express.static('public'));
+}
+
 // Email endpoint
 app.post('/send-email', async (req, res) => {
   const { name, email, subject, message } = req.body;
